@@ -6,23 +6,23 @@ This document tracks the missing items required by the assessment criteria in `d
 
 ## Documentation Requirements
 
-- [ ] Storyboard (PDF) - Complete user flow diagrams showing all screens and interactions
-- [ ] UML Use Case Diagram - Complete use case diagram showing all actors and use cases
-- [ ] Actor descriptions - Brief description for each actor in the system
-- [ ] Non-functional requirements (FURPS) - At least 3 measurable quality requirements
-- [ ] Test concept documentation
-  - [ ] Test environment description
-  - [ ] Test methodology
-  - [ ] Test cases (at least one per use case)
-- [ ] System architecture diagram - Class or package diagram with relationships
-- [ ] Test protocol documentation
-  - [ ] Test execution timestamp and tester information
-  - [ ] Test case references
-  - [ ] Test results
-- [ ] 3-point reflection
-  - [ ] Intent description (SOLL)
-  - [ ] Result description (IST)
-  - [ ] Lessons learned
+- [x] Storyboard (PDF) - Complete user flow diagrams showing all screens and interactions
+- [x] UML Use Case Diagram - Complete use case diagram showing all actors and use cases
+- [x] Actor descriptions - Brief description for each actor in the system
+- [x] Non-functional requirements (FURPS) - At least 3 measurable quality requirements
+- [x] Test concept documentation
+  - [x] Test environment description
+  - [x] Test methodology
+  - [x] Test cases (at least one per use case)
+- [x] System architecture diagram - Class or package diagram with relationships
+- [x] Test protocol documentation
+  - [x] Test execution timestamp and tester information
+  - [x] Test case references
+  - [x] Test results
+- [x] 3-point reflection
+  - [x] Intent description (SOLL)
+  - [x] Result description (IST)
+  - [x] Lessons learned
 - [ ] App store preparation
   - [ ] App name and icon
   - [ ] App description (under 40 words)
