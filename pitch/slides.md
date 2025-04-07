@@ -167,78 +167,17 @@ it connects to todo
 
 
 
-<v-click>
-
-####  -  Using persistent, local data storage (2 points)
-
-</v-click>
-
-
-<v-click>
-
-###### the tasks
-
-</v-click>
+| **Problems** |  | **Solution**|
+| ------------------- | ------- | ------- |
+| Using persistent, local data storage | ->| the tasks |
+| Using more than one activity or view | -> | the tabs |
+| Communication between two activities or views | -> | mark as done -> moves to done |
+| Using background operations | -> | asynchronous operations for data persistence |
+|Custom icon is used | -> | yeah, it does |
+| Using custom animations (e.g. sprites, path tracking, ...) | -> | Homescreen |
 
 
-<v-click>
 
-####  -  Using more than one activity or view (1 point)
-
-</v-click>
-
-
-<v-click>
-
-###### the tabs
-
-</v-click>
-
-<v-click>
-
-####  -  Communication between two activities or views (1 point)
-
-</v-click>
-
-<v-click>
-
-###### mark as done -> moves to done
-
-</v-click>
-
-<v-click>
-
-####  -  Using background operations (4 points)
-
-</v-click>
-
-<v-click>
-
-###### asynchronous operations for data persistence
-
-</v-click>
-
-<v-click>
-
-####  -  Custom icon is used (1 point)
-
-</v-click>
-<v-click>
-
-###### yeah, it does
-
-</v-click>
-
-<v-click>
-
-####  -  Using custom animations (e.g. sprites, path tracking, ...) (2 points)
-
-</v-click>
-<v-click>
-
-###### Homescreen
-
-</v-click>
 <br><br><br><br>
 
 ###### Erwähnung der Rahmenbedingungen
@@ -246,11 +185,36 @@ it connects to todo
 
 ---
 
-# Why us?
+# YAPPA YAPPA YAPPA
+
+<br>
+<br><br><br><br>
+
+<v-click>
+
+## Life is hard to manage
+
+</v-click>
 
 <v-click>
 
 
-### put YOU in control of your tasks,  not the other way around.
+## Put YOURSELF in control
 
 </v-click>
+
+<v-click>
+
+## Dont trust us.
+
+</v-click>
+
+<v-click>
+
+## Trust yourself.
+
+</v-click>
+
+---
+
+# Thank you
