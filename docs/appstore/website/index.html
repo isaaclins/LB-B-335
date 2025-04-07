@@ -1,0 +1,239 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToYou - Elegant Todo App</title>
+    <meta name="description" content="ToYou: A clean, elegant Todo application with iOS-style design">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, sans-serif;
+        color: #2c3e50;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+      }
+
+      .header {
+        text-align: center;
+        padding: 40px 0;
+        background-color: #f0f4f8;
+        border-radius: 10px;
+      }
+
+      .title {
+        font-size: 3rem;
+        color: #2980b9;
+        margin: 0;
+      }
+
+      .subtitle {
+        color: #34495e;
+        font-size: 1.2rem;
+      }
+
+      .author {
+        color: #2980b9;
+        font-size: 1rem;
+        margin-top: 10px;
+      }
+
+      .main {
+        padding: 20px 0;
+      }
+
+      .features {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+
+      .feature-item {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        background-color: #e7f1f9;
+        margin: 0 10px;
+        border-radius: 10px;
+      }
+
+      .app-screenshots {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+
+      .screenshot {
+        width: 30%;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .signup {
+        text-align: center;
+        padding: 40px;
+        background-color: #f0f4f8;
+        border-radius: 10px;
+      }
+
+      .signup-form {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #3498db;
+        box-sizing: border-box;
+      }
+
+      .submit-button {
+        background-color: #2980b9;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .success-message {
+        color: #2980b9;
+        display: none;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f0f4f8;
+        margin-top: 20px;
+        border-radius: 10px;
+      }
+
+      .source-link {
+        color: #2980b9;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+      }
+
+      @media (max-width: 768px) {
+        .features, .app-screenshots {
+          flex-direction: column;
+        }
+        
+        .feature-item {
+          margin: 10px 0;
+        }
+        
+        .screenshot {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">ToYou</h1>
+        <p class="subtitle">Your Elegant Todo Companion • 2025 Proof of Concept</p>
+        <p class="author">by @isaaclins</p>
+      </header>
+
+      <main class="main">
+        <section class="features">
+          <div class="feature-item">
+            <h2>🏆 Clean Design</h2>
+            <p>Minimalist iOS-style interface across all platforms</p>
+          </div>
+          <div class="feature-item">
+            <h2>✨ Seamless Experience</h2>
+            <p>Built with Flutter and Cupertino widgets</p>
+          </div>
+          <div class="feature-item">
+            <h2>🚀 Productivity Boost</h2>
+            <p>Intuitive task management at your fingertips</p>
+          </div>
+        </section>
+
+        <section class="app-screenshots">
+
+          <img 
+            src="./img/todo.png" 
+            alt="ToYou App Screenshot 2" 
+            class="screenshot" 
+          />
+                  <img src="./img/done.png" alt="ToYou App Screenshot 1" class="screenshot" />
+          <img 
+            src="./img/settings.png" 
+            alt="ToYou App Screenshot 3" 
+            class="screenshot" 
+          />
+        </section>
+
+        <section class="signup">
+          <form id="signup-form" class="signup-form">
+            <h2>Join the Waitlist</h2>
+            <input 
+              type="email" 
+              id="email-input"
+              placeholder="Enter your email" 
+              class="input"
+              required
+            />
+            <button type="submit" class="submit-button">
+              Get Early Access
+            </button>
+          </form>
+          <div id="success-message" class="success-message">
+            <h2>🎉 You're on the list!</h2>
+            <p>We'll notify you when ToYou launches</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>© 2025 ToYou. Proof of Concept. All rights reserved.</p>
+        <p class="author">Created by @isaaclins</p>
+        <a 
+          href="https://github.com/isaaclins/ToYou" 
+          target="_blank" 
+          class="source-link"
+        >
+          View Source
+        </a>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('signup-form');
+        const emailInput = document.getElementById('email-input');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Basic email validation
+          if (!emailInput.value.includes('@')) {
+            alert('Please enter a valid email');
+            return;
+          }
+          
+          // Show success message and hide form
+          form.style.display = 'none';
+          successMessage.style.display = 'block';
+        });
+      });
+    </script>
+  </body>
+  </html> 
