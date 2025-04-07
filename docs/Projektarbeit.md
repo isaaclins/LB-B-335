@@ -131,7 +131,7 @@ D. Motivation hinter der Idee. Weshalb braucht es diese App?
 | 1 Punkt | Zwei Elemente fehlen oder sind nicht nachvollziehbar in der Beschreibung und/oder Abgabe erfolgte verspätet, jedoch bis zum Ende des Kurses. |
 | 0 Punkte | Keine Abgabe als PDF oder mehr als zwei Elemente wurden nicht beschrieben. |
 
-**Erreichte Punkte**: 
+**Erreichte Punkte**: 3
 
 #### 2. Halten des Kurzvortrags (Pitch)
 
@@ -144,7 +144,7 @@ Der Kurzvortrag wurde gehalten, dauerte maximal 90 Sekunden und alle Inhalte aus
 | 1 Punkt | Nicht alle Inhalte aus dem Kriterium 1 wurden vorgestellt. |
 | 0 Punkte | Der Kurzvortrag wurde nicht gehalten. |
 
-**Erreichte Punkte**: 
+**Erreichte Punkte**: 3
 
 #### 3. Storyboard
 
