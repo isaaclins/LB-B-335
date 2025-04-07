@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-import '../models/task.dart';
-import '../providers/task_provider.dart';
+import '../../application/services/task_service.dart';
 import '../widgets/countdown_timer.dart';
-import '../widgets/ghost_widget.dart';
 import 'edit_task_screen.dart';
 
 class DoneScreen extends StatelessWidget {
@@ -12,37 +10,55 @@ class DoneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      backgroundColor: CupertinoTheme.of(context).scaffoldBackgroundColor,
-      navigationBar: const CupertinoNavigationBar(
-        middle: Text('Done'),
+      navigationBar: CupertinoNavigationBar(
+        middle: const Text('Done'),
+        trailing: Builder(
+          builder: (context) {
+            final taskService = Provider.of<TaskService>(context);
+            final doneTasks = taskService.doneTasks;
+
+            if (doneTasks.isEmpty) {
+              return const SizedBox.shrink();
+            }
+
+            return CupertinoButton(
+              padding: EdgeInsets.zero,
+              child: const Text('Clear All'),
+              onPressed: () {
+                showCupertinoDialog(
+                  context: context,
+                  builder: (context) => CupertinoAlertDialog(
+                    title: const Text('Clear All Done Tasks'),
+                    content: const Text(
+                        'Are you sure you want to delete all done tasks?'),
+                    actions: [
+                      CupertinoDialogAction(
+                        child: const Text('Cancel'),
+                        onPressed: () => Navigator.pop(context),
+                      ),
+                      CupertinoDialogAction(
+                        isDestructiveAction: true,
+                        child: const Text('Delete'),
+                        onPressed: () {
+                          taskService.deleteDoneTasks();
+                          Navigator.pop(context);
+                        },
+                      ),
+                    ],
+                  ),
+                );
+              },
+            );
+          },
+        ),
       ),
-      child: Consumer<TaskProvider>(
-        builder: (context, taskProvider, child) {
-          final tasks = taskProvider.doneTasks;
+      child: Consumer<TaskService>(
+        builder: (context, taskService, child) {
+          final tasks = taskService.doneTasks;
 
           if (tasks.isEmpty) {
-            return Center(
-              child: Padding(
-                padding: const EdgeInsets.all(32.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const GhostWidget(),
-                    const SizedBox(height: 16),
-                    Text(
-                      'No completed tasks yet',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: CupertinoTheme.of(context)
-                            .textTheme
-                            .textStyle
-                            .color
-                            ?.withOpacity(0.5),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+            return const Center(
+              child: Text('No completed tasks yet'),
             );
           }
 
@@ -50,15 +66,16 @@ class DoneScreen extends StatelessWidget {
             itemCount: tasks.length,
             itemBuilder: (context, index) {
               final task = tasks[index];
+
               return CupertinoListTile(
                 backgroundColor:
                     CupertinoTheme.of(context).scaffoldBackgroundColor,
                 leading: CupertinoButton(
                   padding: EdgeInsets.zero,
                   onPressed: () {
-                    taskProvider.toggleTaskStatus(task.id);
+                    taskService.toggleTaskStatus(task.id);
                   },
-                  child: const Icon(CupertinoIcons.check_mark_circled),
+                  child: const Icon(CupertinoIcons.checkmark_circle_fill),
                 ),
                 title: Text(
                   task.title,
@@ -77,23 +94,12 @@ class DoneScreen extends StatelessWidget {
                         ),
                       ),
                     if (task.dueDate != null)
-                      Row(
-                        children: [
-                          Text(
-                            'Due: ${task.dueDate!.toLocal().toString().split(' ')[0]} ',
-                            style: const TextStyle(
-                              decoration: TextDecoration.lineThrough,
-                              color: CupertinoColors.systemGrey,
-                            ),
-                          ),
-                          CountdownTimer(
-                            dueDate: task.dueDate!,
-                            style: const TextStyle(
-                              decoration: TextDecoration.lineThrough,
-                              color: CupertinoColors.systemGrey,
-                            ),
-                          ),
-                        ],
+                      Text(
+                        'Due: ${_formatDateTime(task.dueDate!)}',
+                        style: const TextStyle(
+                          color: CupertinoColors.systemGrey,
+                          decoration: TextDecoration.lineThrough,
+                        ),
                       ),
                   ],
                 ),
@@ -136,7 +142,7 @@ class DoneScreen extends StatelessWidget {
                                       isDestructiveAction: true,
                                       child: const Text('Delete'),
                                       onPressed: () {
-                                        taskProvider.deleteTask(task.id);
+                                        taskService.deleteTask(task.id);
                                         Navigator.pop(context);
                                       },
                                     ),
@@ -171,5 +177,11 @@ class DoneScreen extends StatelessWidget {
         },
       ),
     );
+  }
+
+  String _formatDateTime(DateTime dateTime) {
+    final date = dateTime.toLocal().toString().split(' ')[0];
+    final time = dateTime.toLocal().toString().split(' ')[1].substring(0, 5);
+    return '$date at $time';
   }
 }

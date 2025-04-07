@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-import '../providers/task_provider.dart';
+import '../../application/services/task_service.dart';
 import '../widgets/countdown_timer.dart';
 import '../widgets/ghost_widget.dart';
 import '../widgets/sad_widget.dart';
@@ -16,9 +16,9 @@ class TodoScreen extends StatelessWidget {
     return CupertinoPageScaffold(
       backgroundColor: CupertinoColors.systemBackground,
       navigationBar: const CupertinoNavigationBar(middle: Text('Todo')),
-      child: Consumer<TaskProvider>(
-        builder: (context, taskProvider, child) {
-          final tasks = taskProvider.todoTasks;
+      child: Consumer<TaskService>(
+        builder: (context, taskService, child) {
+          final tasks = taskService.todoTasks;
 
           return Stack(
             children: [
@@ -133,7 +133,7 @@ class TodoScreen extends StatelessWidget {
                       leading: CupertinoButton(
                         padding: EdgeInsets.zero,
                         onPressed: () {
-                          taskProvider.toggleTaskStatus(task.id);
+                          taskService.toggleTaskStatus(task.id);
                         },
                         child: const Icon(CupertinoIcons.circle),
                       ),
@@ -146,7 +146,7 @@ class TodoScreen extends StatelessWidget {
                             Row(
                               children: [
                                 Text(
-                                  'Due: ${task.dueDate!.toLocal().toString().split(' ')[0]} ',
+                                  'Due: ${_formatDateTime(task.dueDate!)} ',
                                   style: const TextStyle(
                                     color: CupertinoColors.systemGrey,
                                   ),
@@ -214,7 +214,7 @@ class TodoScreen extends StatelessWidget {
                                             isDestructiveAction: true,
                                             child: const Text('Delete'),
                                             onPressed: () {
-                                              taskProvider.deleteTask(task.id);
+                                              taskService.deleteTask(task.id);
                                               Navigator.pop(context);
                                             },
                                           ),
@@ -292,5 +292,11 @@ class TodoScreen extends StatelessWidget {
         },
       ),
     );
+  }
+
+  String _formatDateTime(DateTime dateTime) {
+    final date = dateTime.toLocal().toString().split(' ')[0];
+    final time = dateTime.toLocal().toString().split(' ')[1].substring(0, 5);
+    return '$date at $time';
   }
 }

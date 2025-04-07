@@ -1,28 +1,27 @@
 import 'package:flutter/foundation.dart';
-import '../models/task.dart';
-import '../services/storage_service.dart';
+import '../../domain/models/task.dart';
+import '../../domain/repositories/task_repository.dart';
 
-class TaskProvider with ChangeNotifier {
-  final List<Task> _tasks = [];
-  final StorageService _storage = StorageService();
+class TaskService with ChangeNotifier {
+  final TaskRepository _repository;
+  List<Task> _tasks = [];
+
+  TaskService(this._repository) {
+    _loadTasks();
+  }
 
   List<Task> get tasks => _tasks;
   List<Task> get todoTasks => _tasks.where((task) => !task.isDone).toList();
   List<Task> get doneTasks => _tasks.where((task) => task.isDone).toList();
 
-  TaskProvider() {
-    _loadTasks();
-  }
-
   Future<void> _loadTasks() async {
-    final loadedTasks = await _storage.loadTasks();
-    _tasks.addAll(loadedTasks);
+    _tasks = await _repository.getAllTasks();
     notifyListeners();
   }
 
   Future<void> addTask(Task task) async {
+    await _repository.saveTask(task);
     _tasks.add(task);
-    await _storage.saveTasks(_tasks);
     notifyListeners();
   }
 
@@ -30,34 +29,35 @@ class TaskProvider with ChangeNotifier {
     final index = _tasks.indexWhere((task) => task.id == updatedTask.id);
     if (index != -1) {
       _tasks[index] = updatedTask;
-      await _storage.saveTasks(_tasks);
+      await _repository.updateTask(updatedTask);
       notifyListeners();
     }
   }
 
   Future<void> deleteTask(String taskId) async {
     _tasks.removeWhere((task) => task.id == taskId);
-    await _storage.saveTasks(_tasks);
+    await _repository.deleteTask(taskId);
     notifyListeners();
   }
 
   Future<void> deleteAllTasks() async {
     _tasks.clear();
-    await _storage.saveTasks(_tasks);
+    await _repository.deleteAllTasks();
     notifyListeners();
   }
 
   Future<void> deleteDoneTasks() async {
     _tasks.removeWhere((task) => task.isDone);
-    await _storage.saveTasks(_tasks);
+    await _repository.deleteDoneTasks();
     notifyListeners();
   }
 
   Future<void> toggleTaskStatus(String taskId) async {
     final index = _tasks.indexWhere((task) => task.id == taskId);
     if (index != -1) {
-      _tasks[index] = _tasks[index].copyWith(isDone: !_tasks[index].isDone);
-      await _storage.saveTasks(_tasks);
+      final updatedTask = _tasks[index].copyWith(isDone: !_tasks[index].isDone);
+      _tasks[index] = updatedTask;
+      await _repository.updateTask(updatedTask);
       notifyListeners();
     }
   }

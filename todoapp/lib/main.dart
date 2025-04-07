@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-import 'providers/task_provider.dart';
-import 'providers/settings_provider.dart';
-import 'screens/home_screen.dart';
+import 'application/services/task_service.dart';
+import 'application/services/settings_service.dart';
+import 'infrastructure/repositories/task_repository_impl.dart';
+import 'infrastructure/repositories/settings_repository_impl.dart';
+import 'presentation/screens/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,12 +16,21 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Initialize repositories
+    final taskRepository = TaskRepositoryImpl();
+    final settingsRepository = SettingsRepositoryImpl();
+
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => TaskProvider()),
-        ChangeNotifierProvider(create: (_) => SettingsProvider()),
+        // Provide services that depend on repositories
+        ChangeNotifierProvider(
+          create: (_) => TaskService(taskRepository),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => SettingsService(settingsRepository),
+        ),
       ],
-      child: Consumer<SettingsProvider>(
+      child: Consumer<SettingsService>(
         builder: (context, settings, child) {
           return CupertinoApp(
             title: 'Todo App',
