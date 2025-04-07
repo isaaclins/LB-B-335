@@ -77,11 +77,16 @@ class SettingsScreen extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: Text(
-                    'This app demonstrates a layered architecture where:\n\n'
-                    '- Domain layer: Contains business entities and repository interfaces\n'
-                    '- Application layer: Contains business logic and services\n'
-                    '- Infrastructure layer: Contains repository implementations\n'
-                    '- Presentation layer: Contains UI without business logic',
+                    'Author: @Isaaclins\n'
+                    'Version: 1.0.0\n'
+                    'Last Updated: 2025-04-07\n'
+                    'License: MIT\n'
+                    'Description: A simple todo app built with Flutter and Cupertino widgets.\n'
+                    'Features:\n'
+                    '- Add, edit, and delete tasks\n'
+                    '- Dark mode support\n'
+                    '- Delete all tasks\n'
+                    'Thank you for using my app!', 
                     style: TextStyle(
                       color: CupertinoColors.systemGrey,
                       fontSize: 14,
