@@ -1,10 +1,13 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToYou - Elegant Todo App</title>
-    <meta name="description" content="ToYou: A clean, elegant Todo application with iOS-style design">
+    <meta
+      name="description"
+      content="ToYou: A clean, elegant Todo application with iOS-style design"
+    />
     <style>
       body {
         margin: 0;
@@ -72,7 +75,7 @@
       .screenshot {
         width: 30%;
         border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
       .signup {
@@ -126,14 +129,15 @@
       }
 
       @media (max-width: 768px) {
-        .features, .app-screenshots {
+        .features,
+        .app-screenshots {
           flex-direction: column;
         }
-        
+
         .feature-item {
           margin: 10px 0;
         }
-        
+
         .screenshot {
           width: 100%;
           margin-bottom: 15px;
@@ -145,11 +149,18 @@
     <div class="container">
       <header class="header">
         <h1 class="title">ToYou</h1>
-        <p class="subtitle">Your Elegant Todo Companion • 2025 Proof of Concept</p>
+        <p class="subtitle">
+          Your Elegant Todo Companion • 2025 Proof of Concept
+        </p>
         <p class="author">by @isaaclins</p>
       </header>
       <div class="app-logo">
-        <img src="./img/logo.svg" alt="ToYou App Logo" width="120" height="120">
+        <img
+          src="./img/logo.svg"
+          alt="ToYou App Logo"
+          width="120"
+          height="120"
+        />
         <style>
           .app-logo {
             text-align: center;
@@ -157,10 +168,114 @@
           }
           .app-logo img {
             border-radius: 22%;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           }
         </style>
       </div>
+
+      <section class="download-section">
+        <div class="download-container">
+          <h2 class="download-title">Download ToYou Now</h2>
+          <p class="download-subtitle">
+            Experience elegant todo management on your Android device
+          </p>
+          <a
+            href="https://github.com/isaaclins/LB-B-335/raw/refs/heads/main/todoapp/apk/app-release%201.apk"
+            class="download-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="download-icon"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download APK
+          </a>
+          <p class="download-note">Version 1.0 • Android 5.0+ required</p>
+        </div>
+        <style>
+          .download-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            border-radius: 10px;
+            margin: 30px 0;
+            color: white;
+          }
+
+          .download-container {
+            max-width: 600px;
+            margin: 0 auto;
+          }
+
+          .download-title {
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+          }
+
+          .download-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+          }
+
+          .download-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: white;
+            color: #2980b9;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+          }
+
+          .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          }
+
+          .download-button:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          }
+
+          .download-icon {
+            margin-right: 10px;
+          }
+
+          .download-note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+          }
+
+          @media (max-width: 768px) {
+            .download-title {
+              font-size: 1.8rem;
+            }
+
+            .download-button {
+              padding: 12px 25px;
+              font-size: 1.1rem;
+            }
+          }
+        </style>
+      </section>
 
       <main class="main">
         <section class="features">
@@ -179,27 +294,30 @@
         </section>
 
         <section class="app-screenshots">
-
-          <img 
-            src="./img/todo.png" 
-            alt="ToYou App Screenshot 2" 
-            class="screenshot" 
+          <img
+            src="./img/todo.png"
+            alt="ToYou App Screenshot 2"
+            class="screenshot"
           />
-                  <img src="./img/done.png" alt="ToYou App Screenshot 1" class="screenshot" />
-          <img 
-            src="./img/settings.png" 
-            alt="ToYou App Screenshot 3" 
-            class="screenshot" 
+          <img
+            src="./img/done.png"
+            alt="ToYou App Screenshot 1"
+            class="screenshot"
+          />
+          <img
+            src="./img/settings.png"
+            alt="ToYou App Screenshot 3"
+            class="screenshot"
           />
         </section>
 
         <section class="signup">
           <form id="signup-form" class="signup-form">
             <h2>Join the Waitlist</h2>
-            <input 
-              type="email" 
+            <input
+              type="email"
               id="email-input"
-              placeholder="Enter your email" 
+              placeholder="Enter your email"
               class="input"
               required
             />
@@ -221,25 +339,25 @@
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('signup-form');
-        const emailInput = document.getElementById('email-input');
-        const successMessage = document.getElementById('success-message');
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("signup-form");
+        const emailInput = document.getElementById("email-input");
+        const successMessage = document.getElementById("success-message");
 
-        form.addEventListener('submit', function(e) {
+        form.addEventListener("submit", function (e) {
           e.preventDefault();
-          
+
           // Basic email validation
-          if (!emailInput.value.includes('@')) {
-            alert('Please enter a valid email');
+          if (!emailInput.value.includes("@")) {
+            alert("Please enter a valid email");
             return;
           }
-          
+
           // Show success message and hide form
-          form.style.display = 'none';
-          successMessage.style.display = 'block';
+          form.style.display = "none";
+          successMessage.style.display = "block";
         });
       });
     </script>
   </body>
-  </html> 
+</html>
