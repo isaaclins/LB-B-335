@@ -13,7 +13,7 @@
 
 | Total Test Cases | Passed | Failed | Skipped |
 | ---------------- | ------ | ------ | ------- |
-| 7                | 6      | 1      | 0       |
+| 7                | 7      | 0      | 0       |
 
 ## Detailed Test Results
 

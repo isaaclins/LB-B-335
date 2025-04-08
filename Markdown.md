@@ -1,3 +1,45 @@
+# Anwendungsfalldiagramm und Anforderungen
+
+## A. Anwendungsfalldiagramm (Use Case Diagram)
+
+```mermaid
+graph TD
+    User[Benutzer] -->|erstellt| CreateTodo[Todo erstellen]
+    User -->|bearbeitet| EditTodo[Todo bearbeiten]
+    User -->|löscht| DeleteTodo[Todo löschen]
+    User -->|markiert als erledigt| CompleteTodo[Todo abschließen]
+```
+
+## B. Akteure
+
+- **Benutzer**: Eine Person, die die Todo-App verwendet, um Aufgaben zu verwalten und zu organisieren.
+
+## C. Nicht-funktionale Anforderungen (FURPS)
+
+### Funktionalität (Functionality)
+
+- Die App muss mindestens 75% der CRUD-Operationen (Create, Read, Update, Delete) für Todos erfolgreich ausführen können.
+- Die App muss eine Offline-Funktionalität bieten, die mindestens 24 Stunden ohne Internetverbindung funktioniert.
+
+### Benutzerfreundlichkeit (Usability)
+
+- Die App muss eine durchschnittliche Ladezeit von unter 2 Sekunden aufweisen.
+- Die App muss eine Touch-Zielgröße von mindestens 48x48 Pixeln für alle interaktiven Elemente bieten.
+
+### Zuverlässigkeit (Reliability)
+
+- Die App muss eine Verfügbarkeit von 100% gewährleisten.
+- Die App muss Datenverlust bei Abstürzen verhindern, indem alle Änderungen mindestens alle 5 Minuten automatisch gespeichert werden.
+
+### Performance (Performance)
+
+- Die App muss mindestens 100 Todos gleichzeitig verwalten können, ohne dass die Applikation crasht.
+
+### Supportability (Supportability)
+
+- Die App muss eine durchschnittliche Fehlerbehebungszeit von unter 24 Stunden für kritische Fehler aufweisen.
+
+
 # Test Concept Documentation
 
 ## Test Environment Description
@@ -38,19 +80,20 @@
    - Focus on testing individual components, services, and utility functions
    - Ensure business logic functions correctly in isolation
 
-2. **Widget Testing**:
+2. **Widget Testing (manual)**:
 
    - Test UI components in isolation
    - Verify rendering, layout, and user interactions
    - Test form validations and error handling
 
-3. **Integration Testing**:
+3. **Integration Testing (manual)**:
 
    - Test interaction between multiple components
    - Verify data flow between screens
    - Test navigation and state management
 
-4. **System Testing**:
+4. **System Testing (manual)**: 
+
    - End-to-end testing of complete user flows
    - Test app under realistic user scenarios
    - Verify all components work together correctly
@@ -200,3 +243,55 @@
   - All previously created tasks are displayed
   - Completed tasks maintain their completed status
   - Task details (due date, description) are preserved
+
+
+# UML Use Case Diagram - Todo App
+
+```
+                                  +----------------------------------+
+                                  |           Todo App               |
+                                  +----------------------------------+
+                                  |                                  |
+                                  |  +-------------------------+     |
+                                  |  |                         |     |
+                                  |  |   Manage Tasks          |     |
+                                  |  |                         |     |
++-------------+                   |  +-------------------------+     |
+|             |                   |    ^ ^ ^ ^                       |
+|             |---> Create Task ---|----+ | | |                      |
+|             |                   |      | | |                       |
+|             |---> View Tasks ----|------+ | |                      |
+|   App User  |                   |        | |                       |
+|             |---> Update Task ---|--------+ |                      |
+|             |                   |          |                       |
+|             |---> Delete Task ---|----------+                      |
+|             |                   |                                  |
++-------------+                   |  +-------------------------+     |
+        |                         |  |                         |     |
+        |                         |  |   Manage Settings       |     |
+        |                         |  |                         |     |
+        |                         |  +-------------------------+     |
+        |                         |    ^                             |
+        +---> Toggle Theme -------|----+                             |
+                                  |                                  |
+                                  +----------------------------------+
+```
+
+## Actor Descriptions
+
+### App User
+
+The primary user of the Todo application who creates, views, updates, and deletes tasks, as well as manages application settings.
+
+## Use Case Descriptions
+
+### Manage Tasks
+
+- **Create Task**: User adds a new task with title, description, due date, and priority
+- **View Tasks**: User views the list of all tasks and can filter or sort them
+- **Update Task**: User modifies an existing task, including marking it as complete
+- **Delete Task**: User removes a task from the system
+
+### Manage Settings
+
+- **Toggle Theme**: User switches between light and dark themes
