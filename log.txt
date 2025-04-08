@@ -1,0 +1,455 @@
+commit bf8da458ab8d9cd8b506613342934f0d2dd9f4b3
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Tue Apr 8 14:10:22 2025 +0200
+
+    feat: enhance appstore website with download section for APK and improve HTML formatting
+
+commit 241086d081ddf17596f0c43de387e374a9238e54
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Tue Apr 8 14:04:18 2025 +0200
+
+    feat: added APK
+
+commit 2926f63b2d2c1d6be6d3c41aade804465b883262
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Tue Apr 8 13:44:25 2025 +0200
+
+    chore: move 1&2 to docs
+
+commit b03829c2792993493b7f6f607d978b25cb3c1867
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Tue Apr 8 13:25:21 2025 +0200
+
+    refactor: simplify JSON serialization in TaskRepositoryImpl by extracting methods for task conversion
+
+commit 5bc071db12a2fd82a23c0a90ab12fc9ca5d30fc9
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Tue Apr 8 09:45:01 2025 +0200
+
+    docs: add comprehensive documentation for Todo app including use case diagrams, test concepts, and detailed requirements
+
+commit 5030d91e46452d380362f636d4617f6309185ecf
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Tue Apr 8 09:44:18 2025 +0200
+
+    Create .gitignore
+
+commit 517874660c0111dda3078e409c338d599adad5e1
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Tue Apr 8 00:05:23 2025 +0200
+
+    docs: remove "View Source" link from footer in appstore website index.html
+
+commit b5bf7cd951c728ba037385e50b43d6d3330ad99b
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Tue Apr 8 00:04:13 2025 +0200
+
+    ci: downgrade upload-pages-artifact action to version 3 in GitHub Actions workflow
+
+commit 5717fdb106fa9ec77fbf0eb44990dcfbb66103c9
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Tue Apr 8 00:03:24 2025 +0200
+
+    ci: upgrade GitHub Actions workflow to use the latest versions of upload-pages-artifact and deploy-pages actions
+
+commit 1ed01fc69268cc4e7dcc8f5e964c2b4e8f98e969
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Tue Apr 8 00:00:39 2025 +0200
+
+    ci: update GitHub Actions workflow to use the latest version of the upload-pages-artifact action
+
+commit e6fe17dac122e3a929a6c5845df07447e5044375
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 23:59:08 2025 +0200
+
+    docs: update app information in settings screen with author, version, last updated date, license, and features
+
+commit 69bb1123695bbe9106829499fec9a05298636829
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 23:59:03 2025 +0200
+
+    docs: add detailed test protocol documentation with results and evidence for task management features
+
+commit 0ac69965cb5e0447465b88b8d421e00e9d2c7112
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 23:58:55 2025 +0200
+
+    docs: add comprehensive test concept documentation including test environment, methodology, and detailed test cases for task management features
+
+commit d9ddf721b53a055f95e388fed77e304a5923323a
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 23:58:43 2025 +0200
+
+    docs: add 3-Point Reflection, Storyboard, and UML Use Case Diagram for Todo app documentation
+
+commit 5032e821a6d539c28bcb45beb9dcea4fa6c91678
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 23:58:32 2025 +0200
+
+    docs: add FURPS non-functional requirements, app icon SVG, screenshot mockup guidelines, and system architecture documentation
+
+commit ba09e877f2408248b71f503ad3d3cfc98cff61a2
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 23:58:22 2025 +0200
+
+    docs: update TODO list to reflect completion of documentation requirements for assessment criteria
+
+commit c9aab246a9fc4ca769f5c681b264951931d25373
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 23:58:14 2025 +0200
+
+    docs: add App Store submission documentation and app logo for TaskFlow
+
+commit de394b6f0b099380ef0109055370b934facd22b0
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 23:56:10 2025 +0200
+
+    feat: add GitHub Actions workflow for deploying a fake site and include initial HTML structure with images for the ToYou app
+
+commit 911f9170f6f4b43126e4c24115a580dc0bb688d4
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 22:49:34 2025 +0200
+
+    refactor: restructure application architecture by implementing a layered design with services and repositories for task and settings management
+
+commit 904de8fa3b18665c5590d9c927ffb4e8d6acb1e8
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 22:49:21 2025 +0200
+
+    docs: add detailed project requirements and evaluation criteria for mobile application development
+
+commit 1c5859baf63cb12ebf808bcbde8c6487cbe33708
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 22:49:00 2025 +0200
+
+    docs: create TODO list for project requirements and documentation
+
+commit 211b75030ebf2fea555515df39bbade6ef04f56c
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 22:22:21 2025 +0200
+
+    docs: add comprehensive project documentation for mobile application development
+
+commit b509de9d19f88ea1bf15abe93aee57b7f00c32f9
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 09:59:01 2025 +0200
+
+    docs: restructure pitch slides to enhance clarity and presentation flow
+
+commit 052e8e4e0a2c78e5983cf7c488c57768d4ebdfb2
+Author: Isaac Lins <contact@isaaclins.com>
+Date:   Mon Apr 7 08:36:30 2025 +0200
+
+    fix: update file permissions for project files
+
+commit 2c42f615ccb6bb95a7e162165a31c677558f6e50
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:36:05 2025 +0000
+
+    chore: add Flutter project metadata
+
+commit 5a8c3ed708391198754cb577a32d604775754b44
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:36:00 2025 +0000
+
+    chore: lock pitch presentation dependencies
+
+commit 7c5b155e1a96cbb16e6dc687dc7173b8428d75ba
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:54 2025 +0000
+
+    docs: add Done and new task interaction screenshot for pitch
+
+commit 244b607cdbe22ceaec427e19360c8c69127221ad
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:48 2025 +0000
+
+    docs: add home and new task delete interaction screenshot for pitch
+
+commit 2b64e6e1e783c5274123c003ffd56f224ae9aff2
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:44 2025 +0000
+
+    docs: add home and new task interaction screenshot for pitch
+
+commit e68080a54fc4c085d6f94080dc3c9734bf24c0c7
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:40 2025 +0000
+
+    docs: add dark mode screenshot for pitch
+
+commit e6d300c30abb4f4ad275e8b349b7aac3646c793f
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:37 2025 +0000
+
+    docs: add light mode screenshot for pitch
+
+commit 7fed631476ca37c7d25e0929c2a19b06fc52f30d
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:24 2025 +0000
+
+    docs: add new task with date screenshot for pitch
+
+commit 15a8e7c54a7188c348cc1b6bf5165e6d20da4dfc
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:20 2025 +0000
+
+    docs: add new task screen screenshot for pitch
+
+commit a083e7dd5ab949cc2a79383dac992dd44ebdabb9
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:17 2025 +0000
+
+    docs: add home screen screenshot for pitch
+
+commit 6ac527e03923d3ce5938906732d37886f7d7cf16
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:14 2025 +0000
+
+    docs: add pitch presentation logo
+
+commit d8b45b38a6abaafbf2c7aff72bee17112019d79d
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:08 2025 +0000
+
+    feat: add external snippets for pitch presentation
+
+commit ec6c284e0e8729b10f714d0b02c74e0f1dc616e1
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:35:03 2025 +0000
+
+    docs: add imported slides page for pitch presentation
+
+commit e1e8f8471c6f42a19858badc2b3141f44f85772d
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:34:57 2025 +0000
+
+    feat: add counter component for pitch presentation
+
+commit 1b8f65e88c8ae4f345a3b32caa05483b7d62a5ea
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:34:49 2025 +0000
+
+    feat: add animation frame 3
+
+commit bd3323300c405f80f413c263b72322c282cb8f45
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:34:33 2025 +0000
+
+    feat: add animation frame 2
+
+commit e4fe1175ec50894a21d6afac9b41517bb57f3a01
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:34:28 2025 +0000
+
+    feat: add animation frame 1
+
+commit 482ba7f782f204f4f4ff77bac716fea8e9b7147a
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:34:23 2025 +0000
+
+    feat: add done checkmark sprite
+
+commit 67cbec89d048b3c27d8ceec30025da10b5cb930a
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:34:19 2025 +0000
+
+    feat: add ghost loading sprite
+
+commit 50b0832a144e947ab00e1321e777989e881a7e28
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:34:16 2025 +0000
+
+    feat: add sad emoji sprite
+
+commit d4d1a9b479293fff6d8e37c609105909ac8d9d75
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:34:09 2025 +0000
+
+    feat: implement local storage service
+
+commit 7a2e577fec595275e732b6a7a8b5223105e677bb
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:34:03 2025 +0000
+
+    docs: add done screen screenshot
+
+commit f31df16da02af9ced6c93974c9946317896f7d9b
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:58 2025 +0000
+
+    docs: add settings screen screenshot
+
+commit 318f493b090724ccee531abe118e56d3ca203073
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:54 2025 +0000
+
+    docs: add todo screen screenshot
+
+commit 8c1d7839b329a53e335ebf1dbaa32cdad54d99de
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:49 2025 +0000
+
+    chore: add pitch presentation git ignore rules
+
+commit f7cf88fa5fef4b0a69d1c3d2a498ffb96f493287
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:45 2025 +0000
+
+    chore: add npm configuration
+
+commit 420a47cd7ecafb538853763f564dc7a0feba5204
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:41 2025 +0000
+
+    chore: add Vercel deployment configuration
+
+commit 9e9909fdb67f1b81aa4d98386197c1e5662a1d53
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:38 2025 +0000
+
+    chore: add Netlify deployment configuration
+
+commit bf140e498f55a09cd7163ca99c8d5fb07ff575e6
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:35 2025 +0000
+
+    docs: add pitch presentation setup instructions
+
+commit bef8a3c0167132800f9ea99438689ed8a33d310f
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:32 2025 +0000
+
+    chore: add pitch presentation dependencies
+
+commit 5a681af75617d1b231dcebf43d756a3d97d738dd
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:29 2025 +0000
+
+    docs: add pitch presentation slides
+
+commit bb7b4f456bf59e101accc64ee785dee472f913c7
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:24 2025 +0000
+
+    docs: add application diagram documentation
+
+commit 614da29c85c6a1db87bd8bd3d8ea24983b72dc03
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:33:21 2025 +0000
+
+    docs: add project evaluation criteria
+
+commit 1078b862454a6f39b09aba11bc4c2aecb66d133a
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:53 2025 +0000
+
+    feat: implement ghost widget for loading states
+
+commit d8c9164ddd590e45f5f7878b334446970ac47020
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:48 2025 +0000
+
+    feat: implement sad widget for empty states
+
+commit 5c8960b9af155b0be5f53ec6684ec4ccb1941c80
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:43 2025 +0000
+
+    feat: implement animated smiley widget
+
+commit 8e823094e905d8cf2d68ffc3f43b03599ab3f674
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:40 2025 +0000
+
+    feat: implement countdown timer widget
+
+commit 83f3aa65e4d846fa6d70f98a5d6c2d5faf127feb
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:36 2025 +0000
+
+    feat: implement completed tasks screen
+
+commit 5c01b5d836357b9427808e4b3df5d6d655cd1059
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:32 2025 +0000
+
+    feat: implement task editing screen
+
+commit 85927cf1d06e94752fb1dda1b8c49ec89619eaa9
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:31 2025 +0000
+
+    feat: implement new task creation screen
+
+commit 0f158247a91ef1ad3d84a6492f8495feb71e1656
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:28 2025 +0000
+
+    feat: implement settings screen for app configuration
+
+commit f3c857d617255f9a5ad75848a4478dd824302cd2
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:26 2025 +0000
+
+    feat: implement main todo list screen
+
+commit 86edbcd2c538c2ffd664604f7fc3af24e9124cd8
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:24 2025 +0000
+
+    feat: implement main home screen with navigation
+
+commit 061c68502c77a8559e61a619a9c8897c59927f9b
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:21 2025 +0000
+
+    feat: implement Settings state management provider
+
+commit c30f99958585ffee5360be0be26df24b6c2080ae
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:18 2025 +0000
+
+    feat: implement Task state management provider
+
+commit 7d8c8fbffe6d7033bbf88f87d20f252ed72f9844
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:14 2025 +0000
+
+    feat: implement Task data model
+
+commit c4986b4846dea95c6361f3c9a561f8ee1f2cf07d
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:11 2025 +0000
+
+    feat: implement main application entry point
+
+commit 8d0c23cc03a08b6ffe6cd15b6d3d5bc1361b9069
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:09 2025 +0000
+
+    chore: configure Dart code analysis rules
+
+commit d9e982ae962bce0c8d9715027c5c73c361187212
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:07 2025 +0000
+
+    chore: configure Git ignore rules for Flutter project
+
+commit 786726f1274d0797f34f00233289e80ff35279d2
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:05 2025 +0000
+
+    docs: add project documentation and setup instructions
+
+commit 078cb3b9c40017257bc949cde1999ffa9a0952d3
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:30:02 2025 +0000
+
+    chore: lock Flutter project dependency versions
+
+commit ce97c7a2157881e58cf756bef68ed303f79938e3
+Author: isaaclins <Isaac.lins07@gmail.com>
+Date:   Mon Apr 7 06:29:54 2025 +0000
+
+    chore: add Flutter project dependencies configuration
