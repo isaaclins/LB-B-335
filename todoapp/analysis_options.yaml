@@ -1,1 +1,33 @@
 include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Length rules
+    lines_longer_than_80_chars: true
+
+    # Naming rules
+    camel_case_types: true
+    camel_case_extensions: true
+    library_private_types_in_public_api: true
+    constant_identifier_names: true
+    non_constant_identifier_names: true
+
+    # Method length rule is set through analyzer
+
+analyzer:
+  errors:
+    # Enforce code style
+    unused_import: warning
+    unnecessary_import: warning
+
+  metrics:
+    # Method length should be at most 30 lines
+    method_length:
+      enabled: true
+      max_lines: 30
+      exclude:
+        # Exclude UI generation methods in widgets
+        - "**/*_screen.dart"
+        - "**/*_page.dart"
+        - "**/*_widget.dart"
+        - "**/build.dart"

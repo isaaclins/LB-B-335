@@ -13,17 +13,19 @@ class TaskRepositoryImpl implements TaskRepository {
     if (tasksJson == null) return [];
 
     final List<dynamic> tasksList = jsonDecode(tasksJson);
-    return tasksList
-        .map((task) => Task(
-              id: task['id'],
-              title: task['title'],
-              description: task['description'],
-              dueDate: task['dueDate'] != null
-                  ? DateTime.parse(task['dueDate'])
-                  : null,
-              isDone: task['isDone'],
-            ))
-        .toList();
+    return tasksList.map(_jsonToTask).toList();
+  }
+
+  Task _jsonToTask(dynamic json) {
+    return Task(
+      id: json['id'],
+      title: json['title'],
+      description: json['description'],
+      dueDate: json['dueDate'] != null
+          ? DateTime.parse(json['dueDate'])
+          : null,
+      isDone: json['isDone'],
+    );
   }
 
   @override
@@ -62,17 +64,19 @@ class TaskRepositoryImpl implements TaskRepository {
     await _saveTasks(tasks);
   }
 
+  Map<String, dynamic> _taskToJson(Task task) {
+    return {
+      'id': task.id,
+      'title': task.title,
+      'description': task.description,
+      'dueDate': task.dueDate?.toIso8601String(),
+      'isDone': task.isDone,
+    };
+  }
+
   Future<void> _saveTasks(List<Task> tasks) async {
     final prefs = await SharedPreferences.getInstance();
-    final tasksJson = tasks
-        .map((task) => {
-              'id': task.id,
-              'title': task.title,
-              'description': task.description,
-              'dueDate': task.dueDate?.toIso8601String(),
-              'isDone': task.isDone,
-            })
-        .toList();
+    final tasksJson = tasks.map(_taskToJson).toList();
     await prefs.setString(_tasksKey, jsonEncode(tasksJson));
   }
 }
